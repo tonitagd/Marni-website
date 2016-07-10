@@ -81,7 +81,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_INFO_2: '???????????????',
             CONTACTS_NAME: 'МАРНИ-Мариела Найденова ЕТ',
             CONTACTS_ADDRESS_TITLE: 'Адрес',
-            CONTACTS_ADDRESS: '5600 гр.Троян, ул.Захари Стоянов 10',
+            CONTACTS_ADDRESS: 'гр.Троян, ул.Захари Стоянов 10',
             CONTACTS_PHONE_TITLE: 'Телефон',
 
         })
@@ -117,7 +117,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_INFO_2: '????????????????????',
             CONTACTS_NAME: 'МАРНИ-Мариела Найденова ЕТ',
             CONTACTS_ADDRESS_TITLE: 'Адрес',
-            CONTACTS_ADDRESS: '5600 гр.Троян, ул.Захари Стоянов 10',
+            CONTACTS_ADDRESS: 'гр.Троян, ул.Захари Стоянов 10',
             CONTACTS_PHONE_TITLE: 'Телефон',
         });
 

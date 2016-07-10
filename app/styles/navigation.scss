@@ -1,0 +1,144 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contacts-nav {
+    background-color: black;
+    height: 40px;
+    color: #cccccc;
+    font-size: 15px;
+    padding: 0 20px;
+    > div {
+        width: 25%;
+        float: right;
+    }
+    .location {
+        float: right;
+    }
+    .phone {
+        float: left;
+    }
+    img {
+        height: 30px;
+        width: auto;
+        margin: 5px 10px;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active {
+        color: #cccccc;
+        text-decoration: none;
+    }
+}
+
+.navbar-default {
+    height: 80px;
+    background-color: #3fa46a;
+    padding: 10px 24%;
+    border: none;
+    border-radius: 0px;
+    .navbar-collapse,
+    .navbar-form,
+    .navbar-brand {
+        padding: 0px;
+    }
+}
+
+ul.marni-navigation {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    margin-top: -7px;
+    padding: 0;
+    li {
+        display: inline-block;
+    }
+}
+
+.marni-navigation a,
+.marni-navigation a.active {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.35em;
+}
+
+.marni-navigation a:hover,
+.marni-navigation a:focus {
+    outline: none;
+}
+
+
+/* Effect 21: borders slight translate */
+
+.marni-navigation li > a {
+    padding: 10px;
+    color: #000;
+    font-weight: 700;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.marni-navigation a::before,
+.marni-navigation a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.marni-navigation a::before {
+    top: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.marni-navigation a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.marni-navigation a:hover,
+.marni-navigation a:focus,
+.marni-navigation a.active {
+    color: #fff;
+}
+
+.marni-navigation a:hover::before,
+.marni-navigation a:focus::before,
+.marni-navigation a.active::before,
+.marni-navigation a:hover::after,
+.marni-navigation a:focus::after,
+.marni-navigation a.active::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}

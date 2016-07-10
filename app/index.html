@@ -40,16 +40,24 @@
     <![endif]-->
     <!-- Add your site or application content here -->
     <div class="header" ng-controller="MainCtrl as ctrl">
+        <div class="contacts-nav">
+            <div>
+                <div class="phone"><img src="/images/phone.png" />0889 722 624</div>
+                <div class="location">
+                    <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><img src="/images/tracker.png" />{{ 'CONTACTS_ADDRESS' | translate }}</a>
+                </div>
+            </div>
+        </div>
         <div class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#/about"><img src="/images/logo.png"></a>
             </div>
-            <div class="collapse navbar-collapse" id="js-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#/about">{{ 'ABOUT' | translate }}</a></li>
-                    <li><a ng-href="#/product">{{ 'PRODUCT' | translate }}</a></li>
-                    <li><a ng-href="#/services">{{ 'SERVICE' | translate }}</a></li>
-                    <li><a ng-href="#/contacts">{{ 'CONTACT' | translate }}</a></li>
+            <div class="collapse navbar-collapse">
+                <ul class="marni-navigation">
+                    <li><a href="#/about" data-hover="{{ 'ABOUT' | translate }}" ng-class="{ 'active' : isActive('/about') }">{{ 'ABOUT' | translate }}</a></li>
+                    <li><a ng-href="#/product" data-hover="{{ 'PRODUCT' | translate }}" ng-class="{ 'active' : isActive('/product')} ">{{ 'PRODUCT' | translate }}</a></li>
+                    <li><a ng-href="#/services" data-hover="{{ 'SERVICE' | translate }}" ng-class="{ 'active' : isActive('/services') }">{{ 'SERVICE' | translate }}</a></li>
+                    <li><a ng-href="#/contacts" data-hover="{{ 'CONTACT' | translate }}" ng-class="{ 'active' : isActive('/contacts') }">{{ 'CONTACT' | translate }}</a></li>
                 </ul>
                 <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()"></select>
             </div>
