@@ -40,13 +40,35 @@
 .navbar-default {
     height: 80px;
     background-color: #3fa46a;
-    padding: 10px 24%;
+    padding: 10px 0;
     border: none;
     border-radius: 0px;
+    .navigation {
+        width: 49%;
+        display: inline-block;
+        margin-left: 24%;
+        display: inline-block;
+        float: left;
+    }
+    #language-dropdown {
+        display: inline-block;
+        float: right;
+        &.en {
+            width: 7%;
+            margin-right: 0px;
+        }
+        &.bg {
+            width: 8%;
+            margin-right: 10px;
+        }
+    }
     .navbar-collapse,
     .navbar-form,
     .navbar-brand {
         padding: 0px;
+    }
+    .navbar-collapse {
+        margin-left: 24%;
     }
 }
 

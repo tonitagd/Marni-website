@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marni logo</title>
+	<style type="text/css">
+		#logo-wrapper{
+			position: relative;
+		}
+
+		.image{
+			position: absolute;
+		}
+
+		#arrow{
+			left: 75px;
+		}
+
+		#logo-wrapper, #arrow{
+			cursor: pointer;
+		}
+
+		#arrow {
+			-moz-transition: all 0.8s;
+			-ms-transition: all 0.8s;
+			-o-transition: all 0.8s;
+			-webkit-transition: all 0.8s;
+		}
+
+		#logo-wrapper:hover #arrow {
+			-moz-transform: rotateX(180deg);
+			-ms-transform:rotateX(180deg);
+			-o-transform: rotateX(180deg);
+			-webkit-transform: rotateX(180deg);
+		}		
+	</style>
+</head>
+<body>
+	<div id="logo-wrapper">
+		<img class="image" src="C:\Users\Moshekov\Desktop\marni\logo\marni_only.png"></img>	
+		<img class="image" id="arrow" src="C:\Users\Moshekov\Desktop\marni\logo\arrow.png"></img>			
+	</div>
+</body>
+</html>

@@ -8,11 +8,19 @@
  * Controller of the marniEngineeringApp
  */
 angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location) {
-    this.language = 'en';
-    this.languages = ['en', 'bg'];
+    this.languages = [{ code: 'en', text: "English", img: "" }, { code: 'bg', text: "Български", img: "" }];
 
-    this.updateLanguage = function() {
-        $translate.use(this.language);
+    this.language = this.languages[0];
+
+
+    this.updateLanguage = function(code) {
+        $translate.use(code);
+        for (var element in this.languages) {
+            if (this.languages[element].code == code) {
+                this.language = this.languages[element];
+                break;
+            }
+        }
     };
 
     $scope.isActive = function(path) {

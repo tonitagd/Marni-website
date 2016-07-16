@@ -29,8 +29,8 @@
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
-    <script src="scripts/controllers/AboutCtrl.js"></script>
     <script src="scripts/controllers/MainCtrl.js"></script>
+    <script src="scripts/directives/SliderMenuDirective.js"></script>
     <!-- endbuild -->
 </head>
 
@@ -49,22 +49,29 @@
             </div>
         </div>
         <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#/about"><img src="/images/logo.png"></a>
+            <div class="navigation">
+                <div class="navbar-header">
+                    <a href="#/about">
+                        <img src="/images/marni_only.png"></img>
+                        <img id="arrow" src="/images/arrow.png"></img>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="marni-navigation">
+                        <li><a href="#/about" data-hover="{{ 'ABOUT' | translate }}" ng-class="{ 'active' : isActive('/about') }">{{ 'ABOUT' | translate }}</a></li>
+                        <li><a ng-href="#/product" data-hover="{{ 'PRODUCT' | translate }}" ng-class="{ 'active' : isActive('/product')} ">{{ 'PRODUCT' | translate }}</a></li>
+                        <li><a ng-href="#/services" data-hover="{{ 'SERVICE' | translate }}" ng-class="{ 'active' : isActive('/services') }">{{ 'SERVICE' | translate }}</a></li>
+                        <li><a ng-href="#/contacts" data-hover="{{ 'CONTACT' | translate }}" ng-class="{ 'active' : isActive('/contacts') }">{{ 'CONTACT' | translate }}</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="marni-navigation">
-                    <li><a href="#/about" data-hover="{{ 'ABOUT' | translate }}" ng-class="{ 'active' : isActive('/about') }">{{ 'ABOUT' | translate }}</a></li>
-                    <li><a ng-href="#/product" data-hover="{{ 'PRODUCT' | translate }}" ng-class="{ 'active' : isActive('/product')} ">{{ 'PRODUCT' | translate }}</a></li>
-                    <li><a ng-href="#/services" data-hover="{{ 'SERVICE' | translate }}" ng-class="{ 'active' : isActive('/services') }">{{ 'SERVICE' | translate }}</a></li>
-                    <li><a ng-href="#/contacts" data-hover="{{ 'CONTACT' | translate }}" ng-class="{ 'active' : isActive('/contacts') }">{{ 'CONTACT' | translate }}</a></li>
-                </ul>
-                <select ng-options="language | translate for language in ctrl.languages" ng-model="ctrl.language" ng-change="ctrl.updateLanguage()"></select>
-            </div>
+            <slider-menu id="language-dropdown" class="{{ ctrl.language.code }}" language="ctrl.language" on-update-language="ctrl.updateLanguage(code)"></slider-meny>
         </div>
     </div>
-    <div class="container">
-        <ui-view/>
+    <div class="content">
+        <div class="container">
+            <ui-view/>
+        </div>
     </div>
     <div class="footer">
     </div>

@@ -1,8 +1,9 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "navigation.scss";
 // endbower
+@import "navigation.scss";
+@import "slider-menu.scss";
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -10,16 +11,45 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     padding: 0.2em 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    min-height: 100% !important;
+    height: 100%;
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
 }
 
+.navbar-header {
+    cursor: pointer;
+    position: relative;
+    img {
+        position: absolute;
+        &#arrow {
+            left: 75px;
+            -moz-transition: all 0.8s;
+            -ms-transition: all 0.8s;
+            -o-transition: all 0.8s;
+            -webkit-transition: all 0.8s;
+        }
+    }
+}
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+.navbar-header:hover #arrow {
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
 
 .header,
-.marketing,
 .footer {
     padding-left: 15px;
     padding-right: 15px;
@@ -53,26 +83,9 @@ body {
     margin: 30px 0;
 }
 
-
-/* Main marketing message and sign up button */
-
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-}
-
-
-/* Supporting marketing content */
-
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
+.content {
+    overflow-y: auto;
+    height: 78%;
 }
 
 

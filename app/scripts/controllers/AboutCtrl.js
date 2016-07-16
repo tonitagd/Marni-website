@@ -7,6 +7,6 @@
  * # AboutCtrl
  * Controller of the marniEngineeringApp
  */
-angular.module('marniEngineeringApp').controller('MainCtrl', function($scope) {
+angular.module('marniEngineeringApp').controller('AboutCtrl', function($scope) {
 
 });
