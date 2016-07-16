@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Marni logo</title>
+	<title>footer</title>
 	<style type="text/css">
-		#logo-wrapper{
-			position: relative;
+		img{
+			width: auto;
+			height: 30px;
 		}
 
-		.image{
-			position: absolute;
+		#footer-text{
+			font-size: 15px;
+			text-align: center;
+		}
+		
+		#fanuc-logo, #lenze-logo, #schneider-logo{
+			height: 20px;		
 		}
 
-		#arrow{
-			left: 75px;
+		#fanuc-logo, #lenze-logo{
+			margin-bottom: 6px;
+		}
+		
+		#omron-logo, #schneider-logo{			
+			margin-bottom: 5px;
 		}
 
-		#logo-wrapper, #arrow{
-			cursor: pointer;
+		#omron-logo{
+			height: 21px;
 		}
 
-		#arrow {
-			-moz-transition: all 0.8s;
-			-ms-transition: all 0.8s;
-			-o-transition: all 0.8s;
-			-webkit-transition: all 0.8s;
+		#schneider-logo{
+			width:90px;
 		}
 
-		#logo-wrapper:hover #arrow {
-			-moz-transform: rotateX(180deg);
-			-ms-transform:rotateX(180deg);
-			-o-transform: rotateX(180deg);
-			-webkit-transform: rotateX(180deg);
-		}		
 	</style>
 </head>
 <body>
-	<div id="logo-wrapper">
-		<img class="image" src="C:\Users\Moshekov\Desktop\marni\logo\marni_only.png"></img>	
-		<img class="image" id="arrow" src="C:\Users\Moshekov\Desktop\marni\logo\arrow.png"></img>			
+	<div id="footer-text">OUR ESSENTIAL PARTNERS
+		<div>
+			<img src="../images/general_electric.png" id="general-electric"></img>
+			<img src="../images/bosch.png"></img>
+			<img src="../images/siemens.png"></img>
+			<img src="../images/schneider.png" id="schneider-logo"></img>			
+			<img src="../images/lenze.png" id="lenze-logo"></img>
+			<img src="../images/omron.png" id="omron-logo"></img>
+			<img src="../images/fagor.png"></img>
+			<img src="../images/fanuc.png" id="fanuc-logo"></img>
+		</div>
 	</div>
 </body>
 </html>
+

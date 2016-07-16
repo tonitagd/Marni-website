@@ -10,7 +10,7 @@
 angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location) {
     this.languages = [{ code: 'en', text: "English", img: "" }, { code: 'bg', text: "Български", img: "" }];
 
-    this.language = this.languages[0];
+    this.language = this.languages[1];
 
 
     this.updateLanguage = function(code) {

@@ -23,14 +23,17 @@ angular.module("marniEngineeringApp").directive("sliderMenu", function() {
                 }, false);
 
                 for (var item in list.children) {
-                    list.children[item].addEventListener('click', function(event) {
-                        if (open) {
-                            event.stopPropagation();
-                            open = false;
-                            el.className = el.className.replace(/\bdr-menu-open\b/, '');
-                            return false;
-                        }
-                    }, false);
+                    var listItem = list.children[item];
+                    if (listItem.localName === "li") {
+                        listItem.addEventListener('click', function(event) {
+                            if (open) {
+                                event.stopPropagation();
+                                open = false;
+                                el.className = el.className.replace(/\bdr-menu-open\b/, '');
+                                return false;
+                            }
+                        }, false);
+                    }
                 }
 
             });

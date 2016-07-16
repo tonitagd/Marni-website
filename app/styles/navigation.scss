@@ -6,43 +6,13 @@
     box-sizing: border-box;
 }
 
-.contacts-nav {
-    background-color: black;
-    height: 40px;
-    color: #cccccc;
-    font-size: 15px;
-    padding: 0 20px;
-    > div {
-        width: 25%;
-        float: right;
-    }
-    .location {
-        float: right;
-    }
-    .phone {
-        float: left;
-    }
-    img {
-        height: 30px;
-        width: auto;
-        margin: 5px 10px;
-    }
-    a,
-    a:hover,
-    a:focus,
-    a:visited,
-    a:active {
-        color: #cccccc;
-        text-decoration: none;
-    }
-}
-
 .navbar-default {
     height: 80px;
     background-color: #3fa46a;
     padding: 10px 0;
     border: none;
     border-radius: 0px;
+    margin-bottom: 0px;
     .navigation {
         width: 49%;
         display: inline-block;
@@ -163,4 +133,8 @@ ul.marni-navigation {
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     transform: translateY(0px);
+}
+
+.images-wrapper img {
+    width: 33.3%;
 }

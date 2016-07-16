@@ -83,6 +83,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_ADDRESS_TITLE: 'Address',
             CONTACTS_ADDRESS: 'Troyan, 10 Zahari Stoyanov str.',
             CONTACTS_PHONE_TITLE: 'Phone',
+            PARTNERS: 'Our Partners',
 
         })
         .translations('bg', {
@@ -119,9 +120,10 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_ADDRESS_TITLE: 'Адрес',
             CONTACTS_ADDRESS: 'гр.Троян, ул.Захари Стоянов 10',
             CONTACTS_PHONE_TITLE: 'Телефон',
+            PARTNERS: 'Нашите партньори',
         });
 
-    $translateProvider.preferredLanguage('en');
+    $translateProvider.preferredLanguage('bg');
 
 });
 

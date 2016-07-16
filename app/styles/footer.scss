@@ -1,0 +1,72 @@
+.footer {
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.contacts-nav {
+    background-color: black;
+    height: 40px;
+    color: #cccccc;
+    font-size: 15px;
+    padding: 0 20px;
+    > div.contacts {
+        width: 25%;
+        float: right;
+    }
+    .location {
+        float: right;
+    }
+    .phone {
+        float: left;
+    }
+    img {
+        height: 30px;
+        width: auto;
+        margin: 5px 10px;
+    }
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active {
+        color: #cccccc;
+        text-decoration: none;
+    }
+}
+
+.footer-images img {
+    width: auto;
+    height: 30px;
+}
+
+#footer-text {
+    font-size: 15px;
+    text-align: center;
+}
+
+#fanuc-logo,
+#lenze-logo,
+#schneider-logo {
+    height: 20px;
+}
+
+#fanuc-logo,
+#lenze-logo {
+    margin-bottom: 6px;
+}
+
+#omron-logo,
+#schneider-logo {
+    margin-bottom: 5px;
+}
+
+#omron-logo {
+    height: 21px;
+}
+
+#schneider-logo {
+    width: 90px;
+}
