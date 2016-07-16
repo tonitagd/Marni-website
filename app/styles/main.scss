@@ -5,23 +5,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "navigation.scss";
 @import "slider-menu.scss";
 @import "footer.scss";
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
+@import "contacts.scss";
 html {
     height: 100%;
 }
 
 body {
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
     overflow: hidden;
     min-height: 100% !important;
     height: 100%;
+    background-color: #f6f6f6;
     a:hover,
     a:focus {
         text-decoration: none;
@@ -50,18 +45,12 @@ body {
     -webkit-transform: rotateX(180deg);
 }
 
-.header,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 
 /* Custom page header */
 
-.header {
+div.header {
     border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     /* Make the masthead heading the same height as the navigation */
     h3 {
         margin-top: 0;
@@ -77,30 +66,13 @@ body {
 
 .content {
     overflow-y: auto;
-    position: absolute;
+    position: relative;
     width: 100%;
-}
-
-
-/* Responsive: Portrait tablets and up */
-
-@media screen and (min-width: 768px) {
+    margin: 30px 0;
+    height: 52%;
     .container {
-        max-width: 730px;
-    }
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+        width: 60%;
+        height: 100%;
+        margin: 0 20%;
     }
 }

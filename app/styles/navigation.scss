@@ -16,8 +16,7 @@
     .navigation {
         width: 49%;
         display: inline-block;
-        margin-left: 24%;
-        display: inline-block;
+        margin-left: 20px;
         float: left;
     }
     #language-dropdown {
@@ -135,6 +134,18 @@ ul.marni-navigation {
     transform: translateY(0px);
 }
 
+
+/* FOTORAMA */
+
 .images-wrapper img {
     width: 33.3%;
+}
+
+.fotorama__nav.fotorama__nav--dots {
+    margin-top: -30px;
+}
+
+.fotorama__nav__frame.fotorama__nav__frame--dot > .fotorama__dot {
+    border-color: #cccccc;
+    box-shadow: 0 0 1px 1px black;
 }

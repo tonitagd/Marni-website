@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link href="lib/jquery.mCustomScrollbar.min.css">
     <!-- 3 KB -->
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -30,6 +31,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- 16 KB -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
@@ -71,32 +73,33 @@
                 </div>
             </div>
         </div>
-        <div class="content">
-            <div class="container">
-                <ui-view/>
-            </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <ui-view/>
         </div>
-        <div class="footer">
-            <div class="contacts-nav">
-                <div class="contacts">
-                    <div class="phone"> {{ 'CONTACT' | translate }}:<img src="/images/phone.png" />0889 722 624</div>
-                    <div class="location">
-                        <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><img src="/images/tracker.png" />{{ 'CONTACTS_ADDRESS' | translate }}</a>
-                    </div>
-                </div>
-                <div class="footer-images">
-                    {{ 'PARTNERS' | translate }}:
-                    <img src="/images/footer/general_electric.png" id="general-electric"></img>
-                    <img src="/images/footer/bosch.png"></img>
-                    <img src="/images/footer/siemens.png"></img>
-                    <img src="/images/footer/schneider.png" id="schneider-logo"></img>
-                    <img src="/images/footer/lenze.png" id="lenze-logo"></img>
-                    <img src="/images/footer/omron.png" id="omron-logo"></img>
-                    <img src="/images/footer/fagor.png"></img>
-                    <img src="/images/footer/fanuc.png" id="fanuc-logo"></img>
+    </div>
+    <div class="footer">
+        <div class="contacts-nav">
+            <div class="contacts">
+                <div class="phone"> {{ 'CONTACT' | translate }}:<img src="/images/phone.png" />0889 722 624</div>
+                <div class="location">
+                    <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><img src="/images/tracker.png" />{{ 'CONTACTS_ADDRESS' | translate }}</a>
                 </div>
             </div>
+            <div class="footer-images">
+                {{ 'PARTNERS' | translate }}:
+                <img src="/images/footer/general_electric.png" id="general-electric"></img>
+                <img src="/images/footer/bosch.png"></img>
+                <img src="/images/footer/siemens.png"></img>
+                <img src="/images/footer/schneider.png" id="schneider-logo"></img>
+                <img src="/images/footer/lenze.png" id="lenze-logo"></img>
+                <img src="/images/footer/omron.png" id="omron-logo"></img>
+                <img src="/images/footer/fagor.png"></img>
+                <img src="/images/footer/fanuc.png" id="fanuc-logo"></img>
+            </div>
         </div>
+    </div>
 </body>
 
 </html>

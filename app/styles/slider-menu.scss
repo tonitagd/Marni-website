@@ -1,8 +1,3 @@
-@font-face {
-    font-family: icomoon;
-    src: url(../fonts/icomoon.woff);
-}
-
 .dr-menu {
     width: 100%;
     max-width: 400px;
@@ -20,16 +15,13 @@
     position: absolute;
     width: 100%;
     z-index: 100;
-    top: 44%;
+    top: 7px;
 }
 
 .dr-menu > div .dr-icon {
-    top: -6px;
-    left: -12%;
+    left: -10%;
+    top: 15px;
     position: absolute;
-    font-size: 16px;
-    line-height: 26px;
-    padding: 0 10px;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -39,16 +31,16 @@
     color: #000;
     left: 65%;
     &.en {
-        -webkit-transform: translate(-300%, -90%);
-        -moz-transform: translate(-300%, -90%);
-        -ms-transform: translate(-300%, -90%);
-        transform: translate(-300%, -90%);
+        -webkit-transform: translate(-590%, -169%);
+        -moz-transform: translate(-590%, -169%);
+        -ms-transform: translate(-590%, -169%);
+        transform: translate(-590%, -169%);
     }
     &.bg {
-        -webkit-transform: translate(-220%, -90%);
-        -moz-transform: translate(-220%, -90%);
-        -ms-transform: translate(-220%, -90%);
-        transform: translate(-220%, -90%);
+        -webkit-transform: translate(-450%, -169%);
+        -moz-transform: translate(-450%, -169%);
+        -ms-transform: translate(-450%, -169%);
+        transform: translate(-450%, -169%);
     }
 }
 
@@ -67,7 +59,7 @@
 
 .dr-menu > div .dr-label {
     position: relative;
-    display: block;
+    display: inline-block;
     color: #000;
     font-size: 14px;
     line-height: 16px;
@@ -116,10 +108,12 @@
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     transition: opacity 0.3s ease;
-    img {
-        width: 20px;
-        height: 15px;
-    }
+}
+
+img.flag {
+    width: 20px;
+    height: 15px;
+    margin-right: 5px;
 }
 
 .dr-menu.dr-menu-open ul li {
@@ -164,7 +158,6 @@
 
 .dr-menu ul li a {
     display: inline-block;
-    padding: 0 5px;
     color: #fff;
     cursor: pointer;
     font-size: 14px;
@@ -175,50 +168,6 @@
     text-decoration: none;
 }
 
-.dr-icon:before,
-.dr-icon:after {
-    position: relative;
-    font-family: icomoon;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
-}
-
 .dr-menu ul .dr-icon:before {
     margin-right: 15px;
-}
-
-.dr-icon-bullhorn:before {
-    content: "\e000";
-}
-
-.dr-icon-camera:before {
-    content: "\e002";
-}
-
-.dr-icon-heart:before {
-    content: "\e003";
-}
-
-.dr-icon-settings:before {
-    content: "\e004";
-}
-
-.dr-icon-switch:before {
-    content: "\e005";
-}
-
-.dr-icon-download:before {
-    content: "\e006";
-}
-
-.dr-icon-user:before {
-    content: "\e001";
-}
-
-.dr-icon-menu:before {
-    content: "\e007";
 }

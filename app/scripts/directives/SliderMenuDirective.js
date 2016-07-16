@@ -7,7 +7,7 @@ angular.module("marniEngineeringApp").directive("sliderMenu", function() {
             [].slice.call(document.querySelectorAll('.dr-menu')).forEach(function(el, i) {
 
                 var trigger = el.querySelector('div.dr-trigger'),
-                    icon = trigger.querySelector('.dr-icon-menu'),
+                    icon = trigger.querySelector('.flag'),
                     open = false,
                     list = el.querySelector('ul');
 
