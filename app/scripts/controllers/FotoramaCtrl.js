@@ -14,23 +14,11 @@ angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope
 
     function init() {
         var dir = "../images/slides/";
-        var temp = [];
-        for (var i = 0; i < 9; i++) {
-            temp.push({ src: dir + "img" + i + ".png" });
-            if ((i + 1) % 3 === 0) {
-                $scope.images.push(temp);
-                temp = [];
-            }
-        }
-        $scope.images.push(temp);
 
-        $('.fotorama').fotorama({
-            width: "100%",
-            maxwidth: '100%',
-            height: "20%",
-            ratio: 16 / 9,
-            autoPlay: true,
-        });
+        for (var i = 0; i < 2; i++) {
+            $scope.images.push({ src: dir + "img" + i + ".png" });
+        }
+
     }
 
 });

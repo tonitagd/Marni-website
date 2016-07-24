@@ -39,34 +39,15 @@
 
 .footer-images img {
     width: auto;
-    height: 30px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.footer-images span {
+    vertical-align: sub;
 }
 
 #footer-text {
     font-size: 15px;
     text-align: center;
-}
-
-#fanuc-logo,
-#lenze-logo,
-#schneider-logo {
-    height: 20px;
-}
-
-#fanuc-logo,
-#lenze-logo {
-    margin-bottom: 6px;
-}
-
-#omron-logo,
-#schneider-logo {
-    margin-bottom: 5px;
-}
-
-#omron-logo {
-    height: 21px;
-}
-
-#schneider-logo {
-    width: 90px;
 }

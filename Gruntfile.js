@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
                 tasks: ['newer:jshint:all', 'newer:jscs:all'],
                 options: {
-                    livereload: '<%= connect.options.livereload %>'
+                    livereload: true
                 }
             },
             jsTest: {
@@ -66,12 +66,12 @@ module.exports = function(grunt) {
                 files: ['<%= yeoman.app %>/views/*.html'],
                 tasks: ['serve'],
                 options: {
-                    livereload: '<%= connect.options.livereload %>'
+                    livereload: true
                 }
             },
             livereload: {
                 options: {
-                    livereload: '<%= connect.options.livereload %>'
+                    livereload: true
                 },
                 files: [
                     '<%= yeoman.app %>/views/{,*/}*.html',
@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                 port: 9000,
                 // Change this to '0.0.0.0' to access the server from outside.
                 hostname: 'localhost',
-                livereload: 35729
+                livereload: 35731
             },
             livereload: {
                 options: {
@@ -111,22 +111,7 @@ module.exports = function(grunt) {
                     }
                 }
             },
-            test: {
-                options: {
-                    port: 9001,
-                    middleware: function(connect) {
-                        return [
-                            connect.static('.tmp'),
-                            connect.static('test'),
-                            connect().use(
-                                './app/bower_components',
-                                connect.static('./app/bower_components')
-                            ),
-                            connect.static(appConfig.app)
-                        ];
-                    }
-                }
-            },
+
             dist: {
                 options: {
                     open: true,
@@ -196,37 +181,12 @@ module.exports = function(grunt) {
                 src: ['<%= yeoman.app %>/index.html'],
                 ignorePath: /\.\.\//
             },
-            test: {
-                devDependencies: true,
-                src: '<%= karma.unit.configFile %>',
-                ignorePath: /\.\.\//,
-                fileTypes: {
-                    js: {
-                        block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-                        detect: {
-                            js: /'(.*\.js)'/gi
-                        },
-                        replace: {
-                            js: '\'{{filePath}}\','
-                        }
-                    }
-                }
-            },
             sass: {
                 src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 ignorePath: /(\.\.\/){1,2}bower_components\//
             },
 
-            test: {
-                src: ['test/spec/{,*/}*.ts', 'test/e2e/{,*/}*.ts'],
-                dest: '.tmp/spec',
-                options: {
-                    module: 'amd', //or commonjs
-                    target: 'es5', //or es3
-                    sourcemap: true,
-                    declaration: true
-                }
-            }
+
         },
 
 
@@ -443,9 +403,6 @@ module.exports = function(grunt) {
             server: [
                 'compass:server'
             ],
-            test: [
-                'compass'
-            ],
             dist: [
                 'compass:dist',
                 'copy:styles',
@@ -476,14 +433,7 @@ module.exports = function(grunt) {
         grunt.task.run(['serve:' + target]);
     });
 
-    grunt.registerTask('test', [
-        'clean:server',
-        'wiredep',
-        'concurrent:test',
-        'postcss',
-        'connect:test',
-        'karma'
-    ]);
+
 
     grunt.registerTask('build', [
         'clean:dist',
@@ -504,7 +454,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'newer:jshint',
-        'test',
         'build'
     ]);
 };
