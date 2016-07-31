@@ -20,7 +20,8 @@
 
 .dr-menu > div .dr-icon {
     left: -10%;
-    top: 15px;
+    top: 17px;
+    ;
     position: absolute;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -61,8 +62,8 @@
     position: relative;
     display: inline-block;
     color: #000;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.75em;
+    line-height: 1.2em;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -160,7 +161,7 @@ img.flag {
     display: inline-block;
     color: #fff;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.75em;
 }
 
 .dr-menu ul li a:hover {

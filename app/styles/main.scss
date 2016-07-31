@@ -15,7 +15,7 @@ html {
 
 body {
     padding: 0;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     overflow: hidden;
     min-height: 100% !important;
     height: 100%;
@@ -29,9 +29,12 @@ body {
 .navbar-header {
     cursor: pointer;
     position: relative;
+    margin-right: 10px;
     img {
-        position: absolute;
         &#arrow {
+            position: absolute;
+            left: 0px;
+            top: 0px;
             -moz-transition: all 0.8s;
             -ms-transition: all 0.8s;
             -o-transition: all 0.8s;
@@ -70,20 +73,21 @@ div.header {
     color: #1d4e32;
     font-size: 40px;
     line-height: 40px;
-    margin-top: 10px;
+    margin-top: 3rem;
     margin-bottom: 30px;
     font-weight: 700;
 }
 
 .content {
-    overflow-y: auto;
+    overflow: hidden;
     position: relative;
     width: 100vw;
-    height: 62vh;
-    font-size: 16px;
+    height: 67.5vh;
+    font-size: 1.2em;
+    .mCustomScrollBox {
+        padding-bottom: 3vh;
+    }
     .container {
         width: 60vw;
-        height: 55vh;
-        margin: 30px 20vw;
     }
 }

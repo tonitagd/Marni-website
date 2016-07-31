@@ -21,4 +21,9 @@ angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope
 
     }
 
+    $scope.getHeight = function() {
+        var documentHeight = $(document).height();
+        return (documentHeight * 2 / 10) + "px";
+    }
+
 });

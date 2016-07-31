@@ -3,20 +3,21 @@
 }
 
 .firms-container {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-.firms:last-child {
-    width: 100%;
+.firms {
+    width: 60vw;
     margin-top: -15px;
-    .firm-group {
+    .firm-group:last-child {
         margin-bottom: 0px;
     }
 }
 
 .firm-group {
-    width: 200px;
-    margin: 0 20px 20px 0;
+    height: 20vh;
+    width: 11vw;
+    margin: 1vh 1vw 1vh 0;
     img {
         width: 100%;
     }
@@ -32,12 +33,13 @@
     text-align: center;
     width: 90%;
     margin: 0px 5%;
-    font-size: 12px;
+    font-size: 0.8em;
 }
 
 .bg-cnc {
-    width: 70%;
-    margin-top: 25px;
+    width: 69%;
+    margin-left: 5vw;
+    height: auto !important;
     .product-title,
     .product-sub {
         text-align: left;

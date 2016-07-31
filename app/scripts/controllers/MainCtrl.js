@@ -20,6 +20,9 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
 
     this.language = this.languages[1];
 
+    $.mCustomScrollbar.defaults.scrollButtons.enable = true;
+    $.mCustomScrollbar.defaults.axis = "y";
+
     this.updateLanguage = function(code) {
         $translate.use(code);
         for (var element in this.languages) {
@@ -33,4 +36,5 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
     $scope.isActive = function(path) {
         return ($location.path().substr(0, path.length) === path);
     };
+
 });

@@ -7,6 +7,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -14,6 +15,8 @@
     <!-- endbuild -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link href="lib/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
     <!-- 3 KB -->
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -28,6 +31,8 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
@@ -66,11 +71,11 @@
             </div>
             <slider-menu id="language-dropdown" class="{{ ctrl.language.code }}" language="ctrl.language" on-update-language="ctrl.updateLanguage(code)"></slider-menu>
         </div>
-        <div class="fotorama" data-loop="true" data-autoplay="4000" ng-controller="FotoramaCtrl" data-minwidth="100%" data-width="100%" data-height="250px" data-maxheight="250px" data-ratio="16/9">
+        <div class="fotorama" data-loop="true" data-autoplay="4000" ng-controller="FotoramaCtrl" data-minwidth="100%" data-width="100%" data-height="{{getHeight()}}" data-maxheight="{{getHeight()}}" data-ratio="16/9">
             <img ng-src="{{ image.src }}" ng-repeat="image in images" />
         </div>
     </div>
-    <div class="content">
+    <div class="content mCustomScrollbar" data-mcs-theme="dark-3">
         <div class="container">
             <ui-view/>
         </div>
@@ -78,7 +83,7 @@
     <div class="footer">
         <div class="contacts-nav">
             <div class="contacts">
-                <div class="phone"> {{ 'CONTACT' | translate }}:<img src="/images/phone.png" />0889 722 624</div>
+                <div class="phone"> {{ 'CONTACT' | translate }}:<img src="/images/phone.png" />+359 889 722 624</div>
                 <div class="location">
                     <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><img src="/images/tracker.png" />{{ 'CONTACTS_ADDRESS' | translate }}</a>
                 </div>
@@ -87,14 +92,30 @@
                 <span>
                 {{ 'PARTNERS' | translate }}:
                 </span>
-                <img src="/images/footer/general_electric.png"></img>
-                <img src="/images/footer/bosch.png"></img>
-                <img src="/images/footer/siemens.png"></img>
-                <img src="/images/footer/schneider.png"></img>
-                <img src="/images/footer/lenze.png"></img>
-                <img src="/images/footer/omron.png"></img>
-                <img src="/images/footer/fagor.png"></img>
-                <img src="/images/footer/fanuc.png"></img>
+                <a href="http://www.ge.com/" target="_blank">
+                    <img src="/images/footer/general_electric.png" />
+                </a>
+                <a href="http://www.bosch.com/" target="_blank">
+                    <img src="/images/footer/bosch.png" />
+                </a>
+                <a href="http://www.siemens.com/" target="_blank">
+                    <img src="/images/footer/siemens.png" />
+                </a>
+                <a href="http://www.schneider-electric.com/" target="_blank">
+                    <img src="/images/footer/schneider.png" />
+                </a>
+                <a href="http://www.lenze.com/" target="_blank">
+                    <img src="/images/footer/lenze.png" />
+                </a>
+                <a href="http://www.omron.com/" target="_blank">
+                    <img src="/images/footer/omron.png" />
+                </a>
+                <a href="http://comingsoon.fagor.com/" target="_blank">
+                    <img src="/images/footer/fagor.png" id="fagor-footer" />
+                </a>
+                <a href="http://www.fanuc.eu/" target="_blank">
+                    <img src="/images/footer/fanuc.png" />
+                </a>
             </div>
         </div>
     </div>

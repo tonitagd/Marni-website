@@ -50,7 +50,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
 
     $translateProvider
         .translations('en', {
-            ABOUT: 'About us',
+            ABOUT: 'About',
             MESSAGE: 'This website supports your language',
             PRODUCT: 'Products',
             SERVICE: 'Services',
