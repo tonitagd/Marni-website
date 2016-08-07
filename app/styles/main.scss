@@ -1,14 +1,14 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../lib/bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "navigation.scss";
-@import "slider-menu.scss";
-@import "footer.scss";
-@import "about.scss";
-@import "contacts.scss";
-@import "products.scss";
-@import "services.scss";
+@import "navigation";
+@import "slider-menu";
+@import "footer";
+@import "about";
+@import "contacts";
+@import "products";
+@import "services";
+@import "responsive";
 html {
     height: 100%;
 }

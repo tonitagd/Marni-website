@@ -46,7 +46,7 @@ angular.module("marniEngineeringApp").directive("sliderMenu", function() {
 
     return {
         restrict: "E",
-        templateUrl: "../partials/slider-menu.html",
+        templateUrl: "partials/slider-menu.html",
         transclude: true,
         scope: {
             'language': '=',

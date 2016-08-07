@@ -11,11 +11,11 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
     this.languages = [{
         code: 'en',
         text: "English",
-        img: "../images/en.png"
+        img: "images/en.png"
     }, {
         code: 'bg',
         text: "Български",
-        img: "../images/bg.png"
+        img: "images/bg.png"
     }];
 
     this.language = this.languages[1];

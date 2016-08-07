@@ -13,7 +13,7 @@ angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope
     init();
 
     function init() {
-        var dir = "../images/slides/";
+        var dir = "images/slides/";
 
         for (var i = 0; i < 2; i++) {
             $scope.images.push({ src: dir + "img" + i + ".png" });
