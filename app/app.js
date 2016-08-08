@@ -93,7 +93,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
 
         })
         .translations('bg', {
-            ABOUT: 'За Нас',
+            ABOUT: 'За нас',
             MESSAGE: 'Този сайт поддържа вашия език',
             PRODUCT: 'Продукти',
             SERVICE: 'Услуги',

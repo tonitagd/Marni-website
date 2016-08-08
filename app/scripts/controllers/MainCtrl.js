@@ -20,6 +20,8 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
 
     this.language = this.languages[1];
 
+    $scope.showPageFoto = $location.path() === '/about';
+
     $.mCustomScrollbar.defaults.scrollButtons.enable = true;
     $.mCustomScrollbar.defaults.axis = "y";
 

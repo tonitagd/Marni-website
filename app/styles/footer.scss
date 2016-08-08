@@ -14,6 +14,7 @@
     padding: 0 20px;
     > div.contacts {
         float: right;
+        line-height: 40px;
     }
     .location {
         float: right;
@@ -22,9 +23,8 @@
         float: left;
     }
     img {
-        height: 30px;
-        width: auto;
-        margin: 5px 10px;
+        height: 25px;
+        margin: auto 5px auto 15px;
     }
     a,
     a:hover,
@@ -34,21 +34,6 @@
         color: #cccccc;
         text-decoration: none;
     }
-}
-
-.footer-images img {
-    width: auto;
-    height: 13px;
-    margin: 5px;
-    margin-top: 12px;
-}
-
-#fagor-footer {
-    height: 15px;
-}
-
-.footer-images span {
-    vertical-align: sub;
 }
 
 #footer-text {
