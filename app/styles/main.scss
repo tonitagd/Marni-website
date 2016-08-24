@@ -9,6 +9,8 @@
 @import "products";
 @import "services";
 @import "responsive";
+@import "icons";
+@import "constants";
 html {
     height: 100%;
 }
@@ -35,10 +37,6 @@ body {
             position: absolute;
             left: 0px;
             top: 0px;
-            -moz-transition: all 0.8s;
-            -ms-transition: all 0.8s;
-            -o-transition: all 0.8s;
-            -webkit-transition: all 0.8s;
         }
     }
 }
@@ -50,11 +48,18 @@ body {
     -webkit-transform: rotateX(180deg);
 }
 
+.transition {
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+}
+
 
 /* Custom page header */
 
 div.header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid $gray-border;
     margin-bottom: 0px;
     /* Make the masthead heading the same height as the navigation */
     h3 {
@@ -70,9 +75,10 @@ div.header {
 }
 
 .pagetitle {
-    color: #6cbe63;
+    color: $green-color;
     font-size: 40px;
     line-height: 40px;
+    letter-spacing: 3px;
     margin-top: 3rem;
     margin-bottom: 30px;
     font-weight: 900;
@@ -80,11 +86,17 @@ div.header {
     text-shadow: 1px 1px #000000;
 }
 
+.container-parent {
+    position: absolute;
+    top: $navigation-height;
+    bottom: $footer-height;
+}
+
 .content {
     overflow: hidden;
     position: relative;
     width: 100vw;
-    height: 67.5vh;
+    height: 100%;
     font-size: 1.2em;
     .mCustomScrollBox {
         padding-bottom: 3vh;

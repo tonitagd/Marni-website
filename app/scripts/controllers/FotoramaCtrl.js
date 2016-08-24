@@ -6,7 +6,7 @@
  * # AboutCtrl
  * Controller of the marniEngineeringApp
  */
-angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope, $http) {
+angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope, $http, FotoramaService) {
 
     $scope.images = [];
 
@@ -22,8 +22,7 @@ angular.module('marniEngineeringApp').controller('FotoramaCtrl', function($scope
     }
 
     $scope.getHeight = function() {
-        var documentHeight = $(document).height();
-        return (documentHeight * 2 / 10) + "px";
+        return FotoramaService.getFotoramaHeight() + "px";
     }
 
 });

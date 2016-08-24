@@ -44,49 +44,51 @@
     <script src="scripts/controllers/MainCtrl.js"></script>
     <script src="scripts/controllers/FotoramaCtrl.js"></script>
     <script src="scripts/directives/SliderMenuDirective.js"></script>
+    <script src="scripts/services/FotoramaService.js"></script>
     <!-- endbuild -->
 </head>
 
-<body ng-app="marniEngineeringApp">
+<body ng-app="marniEngineeringApp" ng-controller="MainCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div class="header" ng-controller="MainCtrl as ctrl">
+    <div class="header">
         <div class="navbar navbar-default" role="navigation">
             <div class="navigation">
                 <div class="navbar-header">
                     <a href="#/about">
                         <img src="./images/marni_only.png"></img>
-                        <img id="arrow" src="./images/arrow.png"></img>
+                        <img id="arrow" class="transition" src="./images/arrow.png"></img>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="marni-navigation">
-                        <li><a href="#/about" data-hover="{{ 'ABOUT' | translate }}" ng-class="{ 'active' : isActive('/about') }">{{ 'ABOUT' | translate }}</a></li>
-                        <li><a ng-href="#/product" data-hover="{{ 'PRODUCT' | translate }}" ng-class="{ 'active' : isActive('/product')} ">{{ 'PRODUCT' | translate }}</a></li>
-                        <li><a ng-href="#/services" data-hover="{{ 'SERVICE' | translate }}" ng-class="{ 'active' : isActive('/services') }">{{ 'SERVICE' | translate }}</a></li>
-                        <li><a ng-href="#/contacts" data-hover="{{ 'CONTACT' | translate }}" ng-class="{ 'active' : isActive('/contacts') }">{{ 'CONTACT' | translate }}</a></li>
+                        <li><a href="#/about" data-hover="{{ 'ABOUT' | translate }}" ng-class="{ 'active' : isActive('/about') }" class="transition">{{ 'ABOUT' | translate }}</a></li>
+                        <li><a ng-href="#/product" data-hover="{{ 'PRODUCT' | translate }}" ng-class="{ 'active' : isActive('/product')} " class="transition">{{ 'PRODUCT' | translate }}</a></li>
+                        <li><a ng-href="#/contacts" data-hover="{{ 'CONTACT' | translate }}" ng-class="{ 'active' : isActive('/contacts') }" class="transition">{{ 'CONTACT' | translate }}</a></li>
                     </ul>
                 </div>
             </div>
-            <slider-menu id="language-dropdown" class="{{ ctrl.language.code }}" language="ctrl.language" on-update-language="ctrl.updateLanguage(code)"></slider-menu>
+            <slider-menu id="language-dropdown" class="{{ language.code }}" language="language" on-update-language="updateLanguage(code)"></slider-menu>
         </div>
         <div ng-show="showPageFoto" class="fotorama" data-loop="true" data-autoplay="4000" ng-controller="FotoramaCtrl" data-minwidth="100%" data-width="100%" data-height="{{getHeight()}}" data-maxheight="{{getHeight()}}" data-ratio="16/9">
             <img ng-src="{{ image.src }}" ng-repeat="image in images" />
         </div>
     </div>
-    <div class="content mCustomScrollbar" data-mcs-theme="dark-3">
-        <div class="container">
-            <ui-view/>
+    <div class="container-parent" ng-style="style">
+        <div class="content mCustomScrollbar" data-mcs-theme="dark-3">
+            <div class="container ">
+                <ui-view></ui-view>
+            </div>
         </div>
     </div>
     <div class="footer">
         <div class="contacts-nav">
             <div class="contacts">
-                <div class="phone"> {{ 'CONTACT' | translate }}:<img src="./images/phone.png" />+359 889 722 624</div>
-                <div class="location">
-                    <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><img src="./images/tracker.png" />{{ 'CONTACTS_ADDRESS' | translate }}</a>
+                <div class="phone"> {{ 'CONTACT' | translate }}:<span class="icon-phone icon transition"> </span>+359 889 722 624</div>
+                <div class="location ">
+                    <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><span class="icon-location icon transition"> </span>{{ 'CONTACTS_ADDRESS' | translate }}</a>
                 </div>
             </div>
         </div>

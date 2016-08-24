@@ -21,11 +21,10 @@
 .dr-menu > div .dr-icon {
     left: -10%;
     top: 17px;
-    ;
-    position: absolute;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    position: absolute;
 }
 
 .dr-menu.dr-menu-open > div .dr-icon {
@@ -70,6 +69,9 @@
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    &:hover {
+        color: white;
+    }
 }
 
 .dr-menu.dr-menu-open > div .dr-label {

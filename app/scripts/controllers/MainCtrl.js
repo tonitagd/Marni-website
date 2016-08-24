@@ -7,29 +7,53 @@
  * # MainCtrl
  * Controller of the marniEngineeringApp
  */
-angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location) {
-    this.languages = [{
-        code: 'en',
-        text: "English",
-        img: "images/en.png"
-    }, {
-        code: 'bg',
-        text: "Български",
-        img: "images/bg.png"
-    }];
+angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location, FotoramaService) {
+    init();
 
-    this.language = this.languages[1];
+    function init() {
+        $scope.languages = [{
+            code: 'en',
+            text: "English",
+            img: "images/en.png"
+        }, {
+            code: 'bg',
+            text: "Български",
+            img: "images/bg.png"
+        }];
 
-    $scope.showPageFoto = $location.path() === '/about';
+        $scope.language = $scope.languages[1];
+        $scope.style = {};
 
-    $.mCustomScrollbar.defaults.scrollButtons.enable = true;
-    $.mCustomScrollbar.defaults.axis = "y";
+        $scope.location = $location;
 
-    this.updateLanguage = function(code) {
+        $scope.$watch('location.url()', function() {
+            $scope.showPageFoto = $location.path() === '/about';
+            $scope.style = getTop();
+        });
+
+        $.mCustomScrollbar.defaults.scrollButtons.enable = true;
+        $.mCustomScrollbar.defaults.axis = "y";
+
+
+    }
+
+    function getTop() {
+        var documentHeight = $(document).height();
+        var top = documentHeight > 768 ? 80 : 50;
+        if ($scope.showPageFoto) {
+            top += FotoramaService.getFotoramaHeight();
+        }
+
+        return {
+            top: top
+        }
+    }
+
+    $scope.updateLanguage = function(code) {
         $translate.use(code);
-        for (var element in this.languages) {
-            if (this.languages[element].code == code) {
-                this.language = this.languages[element];
+        for (var element in $scope.languages) {
+            if ($scope.languages[element].code == code) {
+                $scope.language = $scope.languages[element];
                 break;
             }
         }
@@ -37,6 +61,6 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
 
     $scope.isActive = function(path) {
         return ($location.path().substr(0, path.length) === path);
-    };
+    }
 
 });

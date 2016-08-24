@@ -1,54 +1,14 @@
-@media all and (max-device-height: 1050px) {
-    .content {
-        height: 67vh;
-    }
-}
-
-@media all and (max-device-height: 1024px) {
-    .content,
-    .content .container {
-        height: 66vh;
-    }
-    .firm-group {
-        min-height: 30vh;
-    }
-}
-
-@media all and (max-device-height: 900px) {
-    .content {
-        height: 64.5vh;
-    }
-    .firm-group {
-        min-height: 25vh;
-    }
-}
-
-@media all and (max-device-height: 800px) {
-    .content {
-        height: 61.5vh;
-    }
-    .firm-group {
-        min-height: 40vh;
-    }
-}
-
 @media all and (max-device-height: 768px) {
-    .content {
-        height: 65vh;
-    }
-    .firm-group {
-        min-height: 30vh;
-    }
     ul.marni-navigation {
-        height: 5vh;
+        height: 30px;
         line-height: 1vh;
         margin-top: -1.6vh;
     }
     div.navbar-header > a > img {
-        height: 5vh;
+        height: 30px;
     }
     .navbar-default {
-        height: 8vh;
+        height: 40px;
     }
     .marni-navigation a,
     .marni-navigation a.active {
@@ -93,21 +53,9 @@
     }
 }
 
-@media all and (max-device-height: 720px) {
-    .content {
-        height: 50.5vh;
-    }
-}
-
-@media all and (max-device-height: 600px) {
-    .content {
-        height: 57.5vh;
-    }
-}
-
 @media all and (max-device-width: 1680px) {
     .content .container,
-    .firms {
+    {
         width: 73vw;
     }
     .firms .firm-group:last-child {

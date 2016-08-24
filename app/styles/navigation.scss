@@ -1,3 +1,4 @@
+@import "constants";
 *,
 *:after,
 *::before {
@@ -7,8 +8,8 @@
 }
 
 .navbar-default {
-    height: 80px;
-    background-color: #6CBE63;
+    height: $navigation-height;
+    background-color: $green-color;
     padding: 10px 0;
     border: none;
     border-radius: 0px;
@@ -77,9 +78,6 @@ ul.marni-navigation {
     color: #000;
     font-weight: 700;
     text-shadow: none;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    transition: color 0.3s;
 }
 
 .marni-navigation a::before,

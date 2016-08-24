@@ -17,7 +17,7 @@ var marniEngineeringApp = angular
         'ui.bootstrap',
         'pascalprecht.translate',
         'ngSanitize',
-        'ngTouch',
+        'ngTouch'
     ]);
 
 marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $translateProvider) {
@@ -79,9 +79,12 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             ABOUT_CNC_BG_TITLE: 'CNC systems made in Bulgaria',
             ABOUT_CNC_BG: 'CNC systems of ETA - 17, TIKSI 300 Т',
             ABOUT_INFO: 'The company manufactures electronic devices for emergency stop of asynchronous motors with nominal supply up to 3x415V and nominal power - up to 22kW.',
-            SERVICES_INFO_1: 'Service, complex subscription service, upgrading, automation of machinery and equipment.',
-            SERVICES_INFO_2: 'Design and manufacture of electronic boards, using systems elemenets created by General Electric, Schneider Electric, Phoenix Contact, Weidmuller, Siemens and others',
+            SERVICES_INFO_1: 'Design and manufacture of electronic boards, using systems elemenets created by General Electric, Schneider Electric, Phoenix Contact, Weidmuller, Siemens and others',
+            SERVICES_INFO_2: 'Service, complex subscription service, upgrading, automation of machinery and equipment.',
             SERVICES_INFO_3: 'Delivery equipment, switches, sensors, cables, instruments from European manufacturers such as: General Electric power protection, Pizzato, Phoenix Contact, Lapp Kabel, Circutor, Klauke, Merz, PCE and others. The company offers everything needed for power distribution and automation.',
+            SERVICES_INFO_LABEL_1: 'Manufacture',
+            SERVICES_INFO_LABEL_2: 'Repair',
+            SERVICES_INFO_LABEL_3: 'Delivery',
             CONTACTS_INFO_1: 'Contact us',
             CONTACTS_INFO_2: '????????????????????',
             CONTACTS_NAME: 'Marni-Mariela Naydenova ЕТ',
@@ -121,9 +124,12 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             ABOUT_CNC_BG_TITLE: 'CNC системи българско производство',
             ABOUT_CNC_BG: 'Системи на ETA - 17, ТИКСИ 300 Т',
             ABOUT_INFO: 'Фирмата произвежда устройства за аварийно електродинамично спиране на асинхронни двигатели с номинално захранване до 3x415V и номинална мощност - до 22kW.',
-            SERVICES_INFO_1: 'Сервиз, комлексно абонаментно обслужване, обновяване, автоматизиране на машини и съоръжения.',
-            SERVICES_INFO_2: 'Проектиране и изработка на ел.табла, използвайки елементи на фирмите General Electric, Schneider Electric, Phoenix Contact, Weidmuller, Siemens и др.',
+            SERVICES_INFO_1: 'Проектиране и изработка на ел.табла, използвайки елементи на фирмите General Electric, Schneider Electric, Phoenix Contact, Weidmuller, Siemens и др.',
+            SERVICES_INFO_2: 'Сервиз, комлексно абонаментно обслужване, обновяване, автоматизиране на машини и съоръжения.',
             SERVICES_INFO_3: 'Доставяне апаратура, изключватели, датчици, кабели, инструменти от европейски производители като: General Electric power protection, Pizzato, Phoenix Contact, Lapp Kabel, Circutor, Klauke, Merz, PCE и други. Фирмата предлага всичко необходимо за електроразпределение и автоматизация.',
+            SERVICES_INFO_LABEL_1: 'Изработка',
+            SERVICES_INFO_LABEL_2: 'Сервис',
+            SERVICES_INFO_LABEL_3: 'Доставка',
             CONTACTS_INFO_1: 'Свържете се с нас',
             CONTACTS_INFO_2: '????????????????????',
             CONTACTS_NAME: 'МАРНИ-Мариела Найденова ЕТ',

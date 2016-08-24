@@ -1,6 +1,7 @@
+@import "constants";
 .footer {
     color: #777;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $gray-border;
     bottom: 0px;
     position: absolute;
     width: 100%;
@@ -8,23 +9,24 @@
 
 .contacts-nav {
     background-color: black;
-    height: 40px;
+    height: $footer-height;
     color: #cccccc;
     font-size: 1.1em;
     padding: 0 20px;
     > div.contacts {
         float: right;
-        line-height: 40px;
+        line-height: $footer-height;
     }
     .location {
         float: right;
+        &:hover {
+            .icon {
+                color: $hover-green-color;
+            }
+        }
     }
     .phone {
         float: left;
-    }
-    img {
-        height: 25px;
-        margin: auto 5px auto 15px;
     }
     a,
     a:hover,
@@ -33,6 +35,21 @@
     a:active {
         color: #cccccc;
         text-decoration: none;
+    }
+    .icon {
+        height: 30px;
+        line-height: 20px;
+        font-size: 20px;
+        margin: auto 5px auto 15px;
+        padding: 3px;
+        border: 2px solid $green-color;
+        border-radius: 100%;
+        color: $green-color;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 
