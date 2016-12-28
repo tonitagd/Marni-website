@@ -32,6 +32,7 @@ body {
     cursor: pointer;
     position: relative;
     margin-right: 10px;
+    width: $logo-width;
     img {
         &#arrow {
             position: absolute;
@@ -90,18 +91,27 @@ div.header {
     position: absolute;
     top: $navigation-height;
     bottom: $footer-height;
+    width: 100%;
 }
 
-.content {
+.container {
     overflow: hidden;
     position: relative;
-    width: 100vw;
-    height: 100%;
+    width: 60vw;
+    padding-top: 10px;
     font-size: 1.2em;
-    .mCustomScrollBox {
-        padding-bottom: 3vh;
-    }
+    margin: auto;
+}
+
+.about-container {
     .container {
-        width: 60vw;
+        height: 100%;
     }
+    .nicescroll-rails.nicescroll-rails-vr {
+        margin-left: calc(20% - 1px);
+    }
+}
+
+.nicescroll-rails.nicescroll-rails-vr {
+    margin-left: -1px;
 }

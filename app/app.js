@@ -17,7 +17,8 @@ var marniEngineeringApp = angular
         'ui.bootstrap',
         'pascalprecht.translate',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'angular-nicescroll'
     ]);
 
 marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $translateProvider) {
@@ -30,10 +31,16 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
                 '': { templateUrl: 'views/about.html' }
             }
         })
-        .state('product', {
-            url: '/product',
+        .state('products', {
+            url: '/products',
             views: {
-                '': { templateUrl: 'views/product.html' }
+                '': { templateUrl: 'views/products.html' }
+            }
+        })
+        .state('partners', {
+            url: '/partners',
+            views: {
+                '': { templateUrl: 'views/partners.html' }
             }
         }).state('services', {
             url: '/services',
@@ -53,6 +60,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             ABOUT: 'About',
             MESSAGE: 'This website supports your language',
             PRODUCT: 'Products',
+            PARTNERS_TITLE: 'Partners',
             SERVICE: 'Services',
             CONTACT: 'Contacts',
             ABOUT_HISTORY: 'The company was established in 2000. Started its operation with manufacturing of electronic MB-series devices, used for emergency stop of asynchronous motors.',
@@ -93,12 +101,14 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_PHONE_TITLE: 'Phones',
             CONTACTS_PHONE_STATIOARY: 'Stationary',
             PARTNERS: 'Our Partners',
+            PRODUCT_CONTENT: 'Manufacturers devices for emergency electro-dynamic stop for engines with supply up to 3x415V and power up to 22kW.'
 
         })
         .translations('bg', {
             ABOUT: 'За нас',
             MESSAGE: 'Този сайт поддържа вашия език',
             PRODUCT: 'Продукти',
+            PARTNERS_TITLE: 'Партньори',
             SERVICE: 'Услуги',
             CONTACT: 'Контакти',
             ABOUT_HISTORY: 'Фирмата е създадена през 2000г. Стартира дейността си с изработката на електронни устройства MB-серия за аварийно eлектродинамично спиране на асинхронни двигатели.',
@@ -128,7 +138,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             SERVICES_INFO_2: 'Сервиз, комлексно абонаментно обслужване, обновяване, автоматизиране на машини и съоръжения.',
             SERVICES_INFO_3: 'Доставяне апаратура, изключватели, датчици, кабели, инструменти от европейски производители като: General Electric power protection, Pizzato, Phoenix Contact, Lapp Kabel, Circutor, Klauke, Merz, PCE и други. Фирмата предлага всичко необходимо за електроразпределение и автоматизация.',
             SERVICES_INFO_LABEL_1: 'Изработка',
-            SERVICES_INFO_LABEL_2: 'Сервис',
+            SERVICES_INFO_LABEL_2: 'Сервиз',
             SERVICES_INFO_LABEL_3: 'Доставка',
             CONTACTS_INFO_1: 'Свържете се с нас',
             CONTACTS_INFO_2: '????????????????????',
@@ -138,6 +148,7 @@ marniEngineeringApp.config(function($stateProvider, $urlRouterProvider, $transla
             CONTACTS_PHONE_TITLE: 'Телефони',
             CONTACTS_PHONE_STATIOARY: 'Стационарен',
             PARTNERS: 'Нашите партньори',
+            PRODUCT_CONTENT: 'Произвеждаме устройства за аварийно електродинамично спиране на асинхронни двигатели с номинално захранване до 3x415V и номинална мощност - до 22kW.'
         });
 
     $translateProvider.preferredLanguage('bg');

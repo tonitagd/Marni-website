@@ -1,4 +1,9 @@
 .about-info {
+    height: calc(100% - 250px);
+    overflow: hidden;
+    .row {
+        margin: 0px;
+    }
     .about-img {
         margin-top: 4vh;
         width: 20vw;
@@ -11,16 +16,21 @@
     .main-info {
         font-weight: 700;
         margin-bottom: 20px;
-        margin-top: 5%;
     }
 }
 
 .about-us.pagetitle {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .partners {
-    margin-top: 30px;
+    position: absolute;
+    bottom: 10px;
+    max-height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     .partners-title {
         font-size: 1.6rem;
         color: #616161;

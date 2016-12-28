@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the marniEngineeringApp
  */
-angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location, FotoramaService) {
+angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location) {
     init();
 
     function init() {
@@ -25,28 +25,6 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
         $scope.style = {};
 
         $scope.location = $location;
-
-        $scope.$watch('location.url()', function() {
-            $scope.showPageFoto = $location.path() === '/about';
-            $scope.style = getTop();
-        });
-
-        $.mCustomScrollbar.defaults.scrollButtons.enable = true;
-        $.mCustomScrollbar.defaults.axis = "y";
-
-
-    }
-
-    function getTop() {
-        var documentHeight = $(document).height();
-        var top = documentHeight > 768 ? 80 : 50;
-        if ($scope.showPageFoto) {
-            top += FotoramaService.getFotoramaHeight();
-        }
-
-        return {
-            top: top
-        }
     }
 
     $scope.updateLanguage = function(code) {

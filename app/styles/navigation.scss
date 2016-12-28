@@ -15,7 +15,7 @@
     border-radius: 0px;
     margin-bottom: 0px;
     .navigation {
-        width: 80%;
+        width: calc(100% - 255px);
         display: inline-block;
         margin-left: 20px;
         float: left;
@@ -23,14 +23,8 @@
     #language-dropdown {
         display: inline-block;
         float: right;
-        &.en {
-            width: 7%;
-            margin-right: 0px;
-        }
-        &.bg {
-            width: 8%;
-            margin-right: 2em;
-        }
+        width: $language-dropdown-width;
+        margin-right: 10px;
     }
     .navbar-collapse,
     .navbar-form,
@@ -127,29 +121,4 @@ ul.marni-navigation {
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     transform: translateY(0px);
-}
-
-
-/* FOTORAMA */
-
-.images-wrapper img {
-    width: 33.3%;
-}
-
-.fotorama__nav.fotorama__nav--dots {
-    margin-top: -30px;
-}
-
-.fotorama__nav__frame.fotorama__nav__frame--dot > .fotorama__dot {
-    border-color: #cccccc;
-    box-shadow: 0 0 1px 1px black;
-}
-
-div.fotorama__stage__frame.fotorama__loaded.fotorama__loaded--img.fotorama__active > img {
-    top: 0px!important;
-    padding-top: 0px!important;
-}
-
-.fotorama.ng-scope {
-    min-width: 100%;
 }
