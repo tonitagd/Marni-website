@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the marniEngineeringApp
  */
-angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $location) {
+angular.module('marniEngineeringApp').controller('MainCtrl', function($translate, $scope, $rootScope, $location) {
     init();
 
     function init() {
@@ -25,6 +25,11 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
         $scope.style = {};
 
         $scope.location = $location;
+
+        $rootScope.$on('$stateChangeStart',
+            function(event, toState, toParams, fromState, fromParams) {
+                $scope.containerClass = $location.$$path.substring(1);
+            })
     }
 
     $scope.updateLanguage = function(code) {

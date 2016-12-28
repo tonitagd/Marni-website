@@ -4,8 +4,11 @@
         line-height: 1vh;
         margin-top: -1.6vh;
     }
-    div.navbar-header > a > img {
-        height: 30px;
+    div.navbar-header {
+        width: 120px;
+        > a > img {
+            height: 30px;
+        }
     }
     .navbar-default {
         height: 40px;
@@ -13,6 +16,9 @@
     .marni-navigation a,
     .marni-navigation a.active {
         font-size: 1em;
+    }
+    .dr-menu {
+        padding-top: 8px;
     }
     .dr-menu > div .dr-label,
     .dr-menu ul li a {
@@ -23,7 +29,7 @@
         height: 10px;
     }
     .dr-menu > div {
-        top: -3px;
+        top: -5px;
     }
     .dr-menu > div .dr-icon {
         left: -8%;
@@ -51,6 +57,16 @@
     .marni-navigation a.active {
         margin: 15px 10px;
     }
+    .container-parent {
+        .pagetitle {
+            margin-top: 0px;
+        }
+        &:not(.contacts-container):not(.products-container) {
+            .pagetitle {
+                margin-bottom: 0px;
+            }
+        }
+    }
 }
 
 @media all and (max-device-width: 1680px) {
@@ -69,7 +85,7 @@
     }
 }
 
-@media all and (max-device-width: 800px) {
+@media all and (min-device-width: 0px) and (max-device-width: 1024px)and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
     .content .container,
     .firms,
     .firm-group {

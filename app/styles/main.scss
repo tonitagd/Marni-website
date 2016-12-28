@@ -8,7 +8,6 @@
 @import "contacts";
 @import "products";
 @import "services";
-@import "responsive";
 @import "icons";
 @import "constants";
 html {
@@ -92,12 +91,12 @@ div.header {
     top: $navigation-height;
     bottom: $footer-height;
     width: 100%;
+    overflow: hidden;
 }
 
 .container {
     overflow: hidden;
     position: relative;
-    width: 60vw;
     padding-top: 10px;
     font-size: 1.2em;
     margin: auto;
@@ -123,3 +122,5 @@ div.header {
     font-weight: bold;
     line-height: 40px;
 }
+
+@import "responsive";

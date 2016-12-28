@@ -6,6 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=windows-1251">
     <meta name="author" content="MARNI">
     <meta name="description" content="MARNI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="marni, марни, remont, mashini, avtomatizaciq, obnovlenie, motorna, spirachka, CNC, strugove, dyrvoobrabotvashti mashini, metalorejeshti mashini, ремонт, автоматизация, машини, моторна, спирачка, ЦНЦ, стругове, дървообработващи машини, металорежещи машини ">
     <title>MARNI Engineering</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -77,20 +78,20 @@
             <slider-menu id="language-dropdown" class="{{ language.code }}" language="language" on-update-language="updateLanguage(code)"></slider-menu>
         </div>
     </div>
-    <div class="container-parent" ng-style="style" ng-nicescroll nice-option="{cursorcolor: '#000', cursorborder:'#dadada', cursorwidth: '6px', horizrailenabled: false}" ng-class="{'about-container': location.$$path==='/about'}">
+    <div class="container-parent {{containerClass}}-container" ng-nicescroll nice-option="{cursorcolor: '#000', cursorborder:'#dadada', horizrailenabled: false}">
         <div class="container">
             <ui-view></ui-view>
         </div>
     </div>
     <div class="footer">
-        <div class="contacts-nav">
-            <a href="http://comingsoon.fagor.com/" target="_blank" class="fagor-rep">
+        <div class="contacts-nav ">
+            <a href="http://comingsoon.fagor.com/ " target="_blank " class="fagor-rep ">
                 {{'FAGOR_REP' | translate}} FAGOR
             </a>
             <div class="contacts">
-                <div class="phone"> {{ 'CONTACT' | translate }}:<span class="icon-phone icon transition"> </span>+359 889 722 624</div>
-                <div class="location ">
-                    <a href="https://goo.gl/maps/iu57WpfNcBm" target="_blank"><span class="icon-location icon transition"> </span>{{ 'CONTACTS_ADDRESS' | translate }}</a>
+                <div class="phone"> {{ 'CONTACT' | translate }}:<span class="icon-phone icon transition "> </span>+359 889 722 624</div>
+                <div class="location">
+                    <a href="https://goo.gl/maps/iu57WpfNcBm " target="_blank "><span class="icon-location icon transition "> </span>{{ 'CONTACTS_ADDRESS' | translate }}</a>
                 </div>
             </div>
         </div>
