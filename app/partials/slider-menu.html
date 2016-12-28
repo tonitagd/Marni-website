@@ -1,14 +1,14 @@
 <div class="side">
-    <nav class="dr-menu">
-        <div class="dr-trigger">
+    <nav class="dr-menu" ng-class="{'dr-menu-open': isOpened}">
+        <div class="dr-trigger" ng-click="isOpened= !isOpened">
             <img class="flag dr-icon {{ language.code }}" src="{{ language.img }}" />
             <a class="dr-label">{{ language.text }}</a>
         </div>
         <ul>
-            <li>
+            <li ng-click="isOpened= !isOpened">
                 <a ng-click="updateLanguage({code: 'en'})"><img class="flag" src="images/en.png" />English</a>
             </li>
-            <li>
+            <li ng-click="isOpened= !isOpened">
                 <a ng-click="updateLanguage({code: 'bg'})"><img class="flag" src="images/bg.png" />Български</a>
             </li>
         </ul>
