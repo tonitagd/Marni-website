@@ -29,7 +29,8 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
         $rootScope.$on('$stateChangeStart',
             function(event, toState, toParams, fromState, fromParams) {
                 $scope.containerClass = $location.$$path.substring(1);
-            })
+            });
+        $scope.toggleProducts = false;
     }
 
     $scope.updateLanguage = function(code) {
@@ -44,6 +45,10 @@ angular.module('marniEngineeringApp').controller('MainCtrl', function($translate
 
     $scope.isActive = function(path) {
         return ($location.path().substr(0, path.length) === path);
+    }
+
+    $scope.isToggled = function(){
+      $scope.toggleProducts = !$scope.toggleProducts;
     }
 
 });

@@ -1,6 +1,9 @@
 .about-info {
     height: calc(100% - 250px);
-    overflow: hidden;
+    .col-md-8 {
+        overflow: hidden;
+        height: 100%;
+    }
     .row {
         margin: 0px;
     }

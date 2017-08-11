@@ -7,6 +7,12 @@
 }
 
 .firms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
     margin-top: 15px;
     .firm-group:last-child {
         margin-bottom: 0px;
@@ -14,6 +20,7 @@
 }
 
 .firm-group {
+    margin-bottom: 5rem;
     .col-md-12 {
         margin: 0 auto;
         text-align: center;

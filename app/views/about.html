@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-12 pagetitle about-us">{{ 'ABOUT' | translate }}</div>
 </div>
-<div class="row about-info" ng-nicescroll nice-option="{cursorcolor: '#000', cursorborder:'#dadada',  horizrailenabled:false}">
+<div class="row about-info">
     <div class="col-md-4"><img class="about-img" src="images/platki.jpg" /></div>
-    <div class="col-md-8">
+    <div class="col-md-8" ng-nicescroll="about-scroll" nice-option="{cursorcolor: '#9d9d9d', cursorborder:'#dadada',  horizrailenabled:false}">
         <div class="row">
             <div class="col-md-12 info main-info">{{ 'ABOUT_HISTORY' | translate }}</div>
         </div>
@@ -14,6 +14,12 @@
         </div>
         <div class="row">
             <div class="col-md-12 info">{{ 'ABOUT_TEAM_1' | translate }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 info">{{ 'ABOUT_TEAM_2' | translate }} <strong>{{ 'MASHSTROY' | translate }}</strong></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 info">{{ 'ABOUT_TEAM_2' | translate }} <strong>{{ 'MASHSTROY' | translate }}</strong></div>
         </div>
         <div class="row">
             <div class="col-md-12 info">{{ 'ABOUT_TEAM_2' | translate }} <strong>{{ 'MASHSTROY' | translate }}</strong></div>
